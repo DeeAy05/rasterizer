@@ -16,7 +16,7 @@ IF(MSVC)
     add_compile_options(/MP)
 endif(MSVC)
 
-# add_subdirectory(externals EXCLUDE_FROM_ALL)
+add_subdirectory(externals EXCLUDE_FROM_ALL)
 # add_subdirectory(math)
 # add_subdirectory(graphics)
 if (RASTERIZER_BUILD_SAMPLES)
