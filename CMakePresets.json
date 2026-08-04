@@ -1,0 +1,48 @@
+{
+    "version": 7,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "vs18",
+            "displayName": "Visual Studio 2026",
+            "generator": "Visual Studio 18 2026",
+            "binaryDir": "${sourceDir}/out/build/${presetName}"
+        },
+        {
+            "name": "vs17",
+            "displayName": "Visual Studio 2022",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/out/build/${presetName}"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vs18-debug",
+            "displayName": "Visual Studio 2026 (Debug)",
+            "configurePreset": "vs18",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs18-release",
+            "displayName": "Visual Studio 2026 (Release)",
+            "configurePreset": "vs18",
+            "configuration": "Release"
+        },
+        {
+            "name": "vs17-debug",
+            "displayName": "Visual Studio 2022 (Debug)",
+            "configurePreset": "vs17",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs17-release",
+            "displayName": "Visual Studio 2022 (Release)",
+            "configurePreset": "vs17",
+            "configuration": "Release"
+        }
+    ]
+}
