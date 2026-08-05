@@ -18,7 +18,7 @@ endif(MSVC)
 
 add_subdirectory(externals EXCLUDE_FROM_ALL)
 # add_subdirectory(math)
-# add_subdirectory(graphics)
+add_subdirectory(graphics)
 if (RASTERIZER_BUILD_SAMPLES)
     add_subdirectory(samples)
 endif(RASTERIZER_BUILD_SAMPLES)
