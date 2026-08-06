@@ -3,8 +3,10 @@
 #include <SDL3/SDL_events.h>
 #include <string_view>
 
+
 struct SDL_Window;
 struct SDL_Renderer;
+struct ImGuiContext;
 
 namespace rasterizer
 {
@@ -51,10 +53,13 @@ public:
 
     bool isVSync() const noexcept;
 
+    bool setCurrent();
 
 private:
     static bool SDLCALL eventWatch( void* userdata, SDL_Event* event );
+    void                beginFrame();
 
+    ImGuiContext* m_ImGuiContext = nullptr;
     SDL_Window*   m_Window;
     SDL_Renderer* m_Renderer;
     int           m_Width      = -1;
